@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layer_section_list_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/subcomponent_list_item_dark_bg">
+
+
+    <ImageView
+        android:id="@+id/layer_section_image_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/layer_section_name_text_view"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/layer_section_duplicate_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/layer_section_name_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#373737"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingStart="8dp"
+        android:scrollHorizontally="true"
+        android:text="Section Name"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layer_section_visible_toggle_button" />
+
+    <ImageButton
+        android:id="@+id/layer_section_duplicate_button"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#B1651D"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layer_section_delete_button"
+        app:srcCompat="@drawable/ic_duplicate" />
+
+    <ImageButton
+        android:id="@+id/layer_section_delete_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#9E2B2B"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <ImageButton
+        android:id="@+id/layer_section_visible_toggle_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#0064B1"
+        android:baselineAlignBottom="true"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layer_section_duplicate_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

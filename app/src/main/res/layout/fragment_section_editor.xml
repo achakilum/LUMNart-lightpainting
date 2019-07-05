@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_section_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/fragment_section_nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/section_editor_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/section_name_edit_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/blue"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <TextView
+                android:id="@+id/section_name_label"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:background="@color/blue"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_section_editor_name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/section_name_text_view"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@color/dark_blue"
+                android:ellipsize="end"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:scrollHorizontally="true"
+                android:text="Section Name"
+                app:layout_constraintEnd_toStartOf="@+id/section_name_edit_button"
+                app:layout_constraintStart_toEndOf="@+id/section_name_label"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/section_aabb_edit_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/green"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/section_name_edit_button"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <TextView
+                android:id="@+id/section_aabb_label"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:background="@color/green"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_section_editor_aabb"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/section_name_label" />
+
+            <TextView
+                android:id="@+id/section_aabb_text_view"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@color/dark_green"
+                android:ellipsize="end"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:scrollHorizontally="true"
+                android:text="[-0.500, -0.500] → [0.500, 0.500]"
+                app:layout_constraintEnd_toStartOf="@+id/section_aabb_edit_button"
+                app:layout_constraintStart_toEndOf="@+id/section_aabb_label"
+                app:layout_constraintTop_toBottomOf="@id/section_name_text_view" />
+
+            <TextView
+                android:id="@+id/section_fitting_label"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:background="@color/purple"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_section_editor_fitting"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/section_aabb_label" />
+
+            <TextView
+                android:id="@+id/section_fitting_text_view"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@color/dark_purple"
+                android:ellipsize="end"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center|right"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:scrollHorizontally="true"
+                android:text="@string/fragment_section_editor_fitting_off"
+                app:layout_constraintEnd_toStartOf="@+id/section_fitting_switch"
+                app:layout_constraintStart_toEndOf="@+id/section_fitting_label"
+                app:layout_constraintTop_toBottomOf="@id/section_aabb_text_view" />
+
+            <Switch
+                android:id="@+id/section_fitting_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@color/dark_purple"
+                android:checked="false"
+                android:gravity="center|right"
+                android:paddingEnd="8dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/section_aabb_edit_button" />
+
+            <TextView
+                android:id="@+id/section_light_header_text_view"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/header_color"
+                android:drawableStart="@drawable/ic_down_small"
+                android:drawableEnd="@drawable/ic_down_small"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/fragment_section_editor_light_header"
+                android:textColor="@color/header_text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/section_fitting_switch" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/section_light_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/section_light_header_text_view" />
+
+            <Button
+                android:id="@+id/section_light_add_button"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/header_color"
+                android:backgroundTintMode="src_in"
+                android:drawableStart="@drawable/ic_add_small"
+                android:drawableEnd="@drawable/ic_add_small"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_section_editor_add_light"
+                android:textColor="@color/header_text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/section_light_recycler_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</FrameLayout>

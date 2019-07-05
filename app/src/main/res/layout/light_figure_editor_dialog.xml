@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/light_figure_editor_dialog_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/light_figure_editor_dialog_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/light_figure_editor_dialog_confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/light_figure_editor_dialog_guideline_mid"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/light_figure_editor_dialog_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/light_figure_editor_dialog_guideline_mid" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/light_figure_editor_dialog_guideline_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/light_figure_editor_dialog_guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="496dp" />
+
+    <TextView
+        android:id="@+id/light_figure_editor_dialog_shapes_label"
+        android:layout_width="48dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/blue"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="@string/dialog_light_editor_figure_shapes"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/light_figure_editor_dialog_shape_select_radio_button"
+        app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_title_view" />
+
+    <TextView
+        android:id="@+id/light_figure_editor_dialog_text_label"
+        android:layout_width="48dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/dark_blue"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="@string/dialog_light_editor_figure_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/light_figure_editor_dialog_text_select_radio_button"
+        app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_shapes_label" />
+
+    <Spinner
+        android:id="@+id/light_figure_editor_dialog_text_font_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_figure_editor_dialog_text_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/light_figure_editor_dialog_text_label"
+        app:layout_constraintTop_toTopOf="@+id/light_figure_editor_dialog_text_label"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/light_figure_editor_dialog_text_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="@+id/light_figure_editor_dialog_text_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/light_figure_editor_dialog_text_label"
+        app:layout_constraintTop_toTopOf="@+id/light_figure_editor_dialog_text_label"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/light_figure_editor_dialog_text_alignment_left_button"
+        android:layout_width="72dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_align_left"
+        app:layout_constraintBottom_toTopOf="@+id/light_figure_editor_dialog_text_edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/light_figure_editor_dialog_text_edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/light_figure_editor_dialog_text_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_text_font_spinner" />
+
+    <ImageButton
+        android:id="@+id/light_figure_editor_dialog_text_alignment_center_button"
+        android:layout_width="72dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_align_center"
+        app:layout_constraintBottom_toTopOf="@+id/light_figure_editor_dialog_text_edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/light_figure_editor_dialog_text_edit_text"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/light_figure_editor_dialog_text_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_text_font_spinner" />
+
+    <ImageButton
+        android:id="@+id/light_figure_editor_dialog_text_alignment_right_button"
+        android:layout_width="72dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_align_right"
+        app:layout_constraintBottom_toTopOf="@+id/light_figure_editor_dialog_text_edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/light_figure_editor_dialog_text_edit_text"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/light_figure_editor_dialog_text_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_text_font_spinner" />
+
+    <TextView
+        android:id="@+id/light_figure_editor_dialog_pivot_x_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dialog_light_editor_figure_pivot_x"
+        app:layout_constraintEnd_toEndOf="@+id/light_figure_editor_dialog_pivot_x_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/light_figure_editor_dialog_pivot_x_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_text_label" />
+
+    <TextView
+        android:id="@+id/light_figure_editor_dialog_pivot_y_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dialog_light_editor_figure_pivot_y"
+        app:layout_constraintEnd_toEndOf="@+id/light_figure_editor_dialog_pivot_y_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/light_figure_editor_dialog_pivot_y_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_text_label" />
+
+    <EditText
+        android:id="@+id/light_figure_editor_dialog_pivot_x_edit_text"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toStartOf="@+id/light_figure_editor_dialog_guideline_mid"
+        app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_pivot_x_label" />
+
+    <EditText
+        android:id="@+id/light_figure_editor_dialog_pivot_y_edit_text"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintStart_toStartOf="@+id/light_figure_editor_dialog_guideline_mid"
+        app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_pivot_y_label" />
+
+    <TextView
+        android:id="@+id/light_figure_editor_dialog_selected_figure_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/dialog_light_editor_figure_selection_label"
+        app:layout_constraintEnd_toStartOf="@+id/light_figure_editor_dialog_guideline_mid"
+        app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_default_pivot_check_box" />
+
+    <ImageView
+        android:id="@+id/light_figure_editor_dialog_selected_figure_icon"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_figure_editor_dialog_selected_figure_label"
+        app:layout_constraintStart_toStartOf="@+id/light_figure_editor_dialog_guideline_mid"
+        app:layout_constraintTop_toTopOf="@+id/light_figure_editor_dialog_selected_figure_label"
+        app:srcCompat="@drawable/ic_ellipse" />
+
+    <TextView
+        android:id="@+id/light_figure_editor_dialog_selected_figure_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/figure_ellipse"
+        app:layout_constraintBottom_toBottomOf="@+id/light_figure_editor_dialog_selected_figure_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/light_figure_editor_dialog_selected_figure_icon"
+        app:layout_constraintTop_toTopOf="@+id/light_figure_editor_dialog_selected_figure_label" />
+
+    <CheckBox
+        android:id="@+id/light_figure_editor_dialog_default_pivot_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/dialog_light_editor_figure_default_pivot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_pivot_x_edit_text" />
+
+    <ImageView
+        android:id="@+id/light_figure_editor_dialog_shape_preview"
+        android:layout_width="64dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/light_figure_editor_dialog_shapes_label"
+        app:layout_constraintStart_toEndOf="@+id/light_figure_editor_dialog_shapes_label"
+        app:layout_constraintTop_toTopOf="@+id/light_figure_editor_dialog_shapes_label"
+        app:srcCompat="@drawable/ic_ellipse" />
+
+    <Spinner
+        android:id="@+id/light_figure_editor_dialog_shape_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_figure_editor_dialog_shape_preview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/light_figure_editor_dialog_shape_preview"
+        app:layout_constraintTop_toTopOf="@+id/light_figure_editor_dialog_shape_preview" />
+
+    <RadioButton
+        android:id="@+id/light_figure_editor_dialog_shape_select_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/blue"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/light_figure_editor_dialog_shapes_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/light_figure_editor_dialog_shapes_label" />
+
+    <RadioButton
+        android:id="@+id/light_figure_editor_dialog_text_select_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/light_figure_editor_dialog_text_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/light_figure_editor_dialog_text_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

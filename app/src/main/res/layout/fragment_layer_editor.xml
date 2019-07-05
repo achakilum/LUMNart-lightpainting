@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_layer_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/fragment_layer_nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layer_editor_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/layer_name_edit_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/blue"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <TextView
+                android:id="@+id/layer_name_label"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:background="@color/blue"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_layer_editor_name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/layer_name_text_view"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@color/dark_blue"
+                android:ellipsize="end"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:scrollHorizontally="true"
+                android:text="Layer Name"
+                app:layout_constraintEnd_toStartOf="@+id/layer_name_edit_button"
+                app:layout_constraintStart_toEndOf="@+id/layer_name_label"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/layer_alpha_label"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:background="@color/purple"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_layer_editor_alpha"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layer_name_label" />
+
+            <SeekBar
+                android:id="@+id/layer_alpha_seek_bar"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="#43164D"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/layer_alpha_label"
+                app:layout_constraintTop_toBottomOf="@+id/layer_name_text_view" />
+
+            <TextView
+                android:id="@+id/layer_section_header_text_view"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/header_color"
+                android:drawableStart="@drawable/ic_down_small"
+                android:drawableEnd="@drawable/ic_down_small"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/fragment_layer_editor_section_header"
+                android:textColor="@color/header_text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layer_alpha_seek_bar" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/layer_section_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layer_section_header_text_view" />
+
+            <Button
+                android:id="@+id/layer_section_add_button"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/header_color"
+                android:backgroundTintMode="src_in"
+                android:drawableStart="@drawable/ic_add_small"
+                android:drawableEnd="@drawable/ic_add_small"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_layer_editor_add_section"
+                android:textColor="@color/header_text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layer_section_recycler_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

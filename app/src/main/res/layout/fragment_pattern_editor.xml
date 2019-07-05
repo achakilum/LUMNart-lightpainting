@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_pattern_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/fragment_pattern_nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pattern_editor_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:id="@+id/pattern_save_button"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/green"
+                android:backgroundTintMode="src_in"
+                android:drawableStart="@drawable/ic_save_small"
+                android:drawableEnd="@drawable/ic_save_small"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_pattern_editor_save"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/pattern_mid_guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/pattern_color_code_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/purple"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="COLOR CODE"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/pattern_mid_guideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pattern_name_label"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/blue"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_pattern_editor_name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pattern_save_button" />
+
+            <ImageButton
+                android:id="@+id/pattern_name_edit_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/blue"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pattern_save_button"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <TextView
+                android:id="@+id/pattern_editor_name_text_view"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/dark_blue"
+                android:ellipsize="end"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:scrollHorizontally="true"
+                android:text="Pattern Name"
+                app:layout_constraintEnd_toStartOf="@+id/pattern_name_edit_button"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/pattern_name_label"
+                app:layout_constraintTop_toBottomOf="@+id/pattern_save_button" />
+
+            <TextView
+                android:id="@+id/pattern_author_label"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:background="@color/green"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_pattern_editor_author"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pattern_name_label" />
+
+            <ImageButton
+                android:id="@+id/pattern_author_edit_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/green"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pattern_name_edit_button"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <TextView
+                android:id="@+id/pattern_editor_author_text_view"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@color/dark_green"
+                android:ellipsize="end"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:scrollHorizontally="true"
+                android:text="Bluelit Halo"
+                app:layout_constraintEnd_toStartOf="@+id/pattern_author_edit_button"
+                app:layout_constraintStart_toEndOf="@+id/pattern_author_label"
+                app:layout_constraintTop_toBottomOf="@+id/pattern_editor_name_text_view" />
+
+            <TextView
+                android:id="@+id/pattern_description_label"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:background="@color/purple"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_pattern_editor_description"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pattern_author_label" />
+
+            <ImageButton
+                android:id="@+id/pattern_description_edit_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/purple"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pattern_author_edit_button"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <TextView
+                android:id="@+id/pattern_editor_description_text_view"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@color/dark_purple"
+                android:ellipsize="end"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:scrollHorizontally="true"
+                android:text="(insert description here)"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toStartOf="@+id/pattern_description_edit_button"
+                app:layout_constraintStart_toEndOf="@+id/pattern_description_label"
+                app:layout_constraintTop_toBottomOf="@+id/pattern_editor_author_text_view" />
+
+            <TextView
+                android:id="@+id/pattern_layer_header_text_view"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/header_color"
+                android:drawableStart="@drawable/ic_down_small"
+                android:drawableEnd="@drawable/ic_down_small"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/fragment_pattern_editor_layer_header"
+                android:textColor="@color/header_text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pattern_editor_description_text_view" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pattern_layer_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pattern_layer_header_text_view" />
+
+            <Button
+                android:id="@+id/pattern_layer_add_button"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/header_color"
+                android:backgroundTintMode="src_in"
+                android:drawableStart="@drawable/ic_add_small"
+                android:drawableEnd="@drawable/ic_add_small"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_pattern_editor_add_layer"
+                android:textColor="@color/header_text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pattern_layer_recycler_view" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/pattern_mid_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

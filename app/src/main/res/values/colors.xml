@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DDDDDD</color>
+    <color name="colorPrimaryDark">#111111</color>
+    <color name="colorAccent">#0070A0</color>
+
+    <color name="dark_blue">#0E3B61</color>
+    <color name="dark_green">#1C4622</color>
+    <color name="dark_purple">#43164D</color>
+    <color name="dark_orange">#80542D</color>
+    <color name="dark_red">#662B2B</color>
+
+    <color name="blue">#0064B1</color>
+    <color name="green">#207723</color>
+    <color name="purple">#770096</color>
+    <color name="orange">#B1651D</color>
+    <color name="red">#9E2B2B</color>
+
+    <color name="subcomponent_list_item_light_bg">#373737</color>
+    <color name="subcomponent_list_item_dark_bg">#292929</color>
+
+    <color name="header_color">#DDDDDD</color>
+    <color name="header_text_color">#111111</color>
+
+    <color name="property_visible">#0E3B61</color>
+    <color name="property_color">#1C4622</color>
+    <color name="property_position">#43164D</color>
+    <color name="property_dimensions">#80542D</color>
+    <color name="property_angle">#662B2B</color>
+    <color name="property_highlight">#E6E6E6</color>
+
+    <color name="surface_view_screen_color">#77FF0000</color>
+
+    <color name="section_aabb_color">#2500FF00</color>
+    <color name="section_aabb_outline_color">#00FF00</color>
+
+    <color name="light_position_start_color">#00FF00</color>
+    <color name="light_position_end_color">#FFFF00</color>
+    <color name="light_position_bridge_color">#FF00FF</color>
+
+    <color name="light_dimensions_start_outline_color">#00FF00</color>
+    <color name="light_dimensions_start_fill_color">#2500FF00</color>
+    <color name="light_dimensions_end_outline_color">#FFFF00</color>
+    <color name="light_dimensions_end_fill_color">#25FFFF00</color>
+
+    <color name="light_angle_start_color">#00FF00</color>
+    <color name="light_angle_end_color">#FFFF00</color>
+</resources>

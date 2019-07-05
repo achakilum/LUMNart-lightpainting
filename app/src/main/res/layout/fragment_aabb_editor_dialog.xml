@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aabb_dialog_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".editor.AABBDialogFragment">
+
+    <TextView
+        android:id="@+id/aabb_dialog_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/aabb_dialog_confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/aabb_dialog_guideline_mid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_min_x_edit_text" />
+
+    <Button
+        android:id="@+id/aabb_dialog_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/aabb_dialog_guideline_mid"
+        app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_max_y_edit_text" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/aabb_dialog_guideline_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/aabb_dialog_guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25304136" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/aabb_dialog_guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/aabb_dialog_guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="300dp" />
+
+    <TextView
+        android:id="@+id/aabb_dialog_min_x_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/dialog_aabb_editor_min_x"
+        app:layout_constraintEnd_toStartOf="@+id/aabb_dialog_guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_surface_view" />
+
+    <TextView
+        android:id="@+id/aabb_dialog_max_x_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/dialog_aabb_editor_max_x"
+        app:layout_constraintEnd_toStartOf="@+id/aabb_dialog_guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/aabb_dialog_guideline_mid"
+        app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_surface_view" />
+
+    <TextView
+        android:id="@+id/aabb_dialog_min_y_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/dialog_aabb_editor_min_y"
+        app:layout_constraintEnd_toStartOf="@+id/aabb_dialog_guideline_mid"
+        app:layout_constraintStart_toStartOf="@+id/aabb_dialog_guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_surface_view" />
+
+    <TextView
+        android:id="@+id/aabb_dialog_max_y_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/dialog_aabb_editor_max_y"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/aabb_dialog_guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_surface_view" />
+
+    <EditText
+        android:id="@+id/aabb_dialog_min_x_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toStartOf="@+id/aabb_dialog_guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_min_x_label" />
+
+    <EditText
+        android:id="@+id/aabb_dialog_max_x_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toStartOf="@+id/aabb_dialog_guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/aabb_dialog_guideline_mid"
+        app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_max_x_label" />
+
+    <EditText
+        android:id="@+id/aabb_dialog_min_y_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toStartOf="@+id/aabb_dialog_guideline_mid"
+        app:layout_constraintStart_toStartOf="@+id/aabb_dialog_guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_min_y_label" />
+
+    <EditText
+        android:id="@+id/aabb_dialog_max_y_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/aabb_dialog_guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_max_y_label" />
+
+    <com.bluelithalo.lumnart.editor.AABBSurfaceView
+        android:id="@+id/aabb_dialog_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="#000000"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_title_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>

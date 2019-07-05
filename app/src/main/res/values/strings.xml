@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">LUMNart</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">LUMNart</string>
+    <string name="nav_header_subtitle">The Ultimate Lightpainting Tool</string>
+    <string name="nav_header_desc">Navigation for LUMNart features</string>
+    <string name="action_settings">Nothing here!</string>
+
+    <string name="menu_pattern_browser">Pattern Browser</string>
+    <string name="main_directory_list_label">Folders</string>
+    <string name="main_pattern_list_label">Patterns</string>
+    <string name="main_pattern_list_end_label">No more patterns. You should make some!</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_save">Save</string>
+    <string name="action_record_video">Record Video</string>
+
+    <string name="title_activity_main">Pattern Browser</string>
+    <string name="title_activity_gltest">GL Test</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_pattern_editor">PatternEditorActivity</string>
+    <string name="title_activity_editor">EditorActivity</string>
+
+    <string name="fragment_pattern_editor_save">SAVE</string>
+    <string name="fragment_pattern_editor_color_code">COLOR CODE</string>
+    <string name="fragment_pattern_editor_add_layer">ADD LAYER</string>
+    <string name="fragment_pattern_editor_name">PATTERN NAME</string>
+    <string name="fragment_pattern_editor_author">AUTHOR</string>
+    <string name="fragment_pattern_editor_description">DESC.</string>
+    <string name="fragment_pattern_editor_layer_header">LAYERS</string>
+
+    <string name="fragment_pattern_color_code_hue">Hue</string>
+    <string name="fragment_pattern_color_code_saturation">Saturation</string>
+
+    <string name="fragment_layer_editor_add_section">ADD SECTION</string>
+    <string name="fragment_layer_editor_name">LAYER NAME</string>
+    <string name="fragment_layer_editor_alpha">ALPHA</string>
+    <string name="fragment_layer_editor_section_header">SECTIONS</string>
+
+    <string name="fragment_section_editor_add_light">ADD LIGHT</string>
+    <string name="fragment_section_editor_name">SECTION NAME</string>
+    <string name="fragment_section_editor_aabb">BOUNDS</string>
+    <string name="fragment_section_editor_fitting">FITTING MODE</string>
+    <string name="fragment_section_editor_fitting_off">EXPAND LIGHTS OUT OF BOUNDS</string>
+    <string name="fragment_section_editor_fitting_on">FIT LIGHTS WITHIN BOUNDS</string>
+    <string name="fragment_section_editor_light_header">LIGHTS</string>
+
+    <string name="fragment_light_editor_add_stage_visible">ADD VISIBILITY STAGE</string>
+    <string name="fragment_light_editor_add_stage_color">ADD COLOR STAGE</string>
+    <string name="fragment_light_editor_add_stage_position">ADD POSITION STAGE</string>
+    <string name="fragment_light_editor_add_stage_dimensions">ADD DIMENSIONS STAGE</string>
+    <string name="fragment_light_editor_add_stage_angle">ADD ROTATION STAGE</string>
+    <string name="fragment_light_editor_name">LIGHT NAME</string>
+    <string name="fragment_light_editor_figure">FIGURE</string>
+    <string name="fragment_light_editor_uniform_dimensions">DIMS. MODE</string>
+    <string name="fragment_light_editor_uniform_dimensions_off">WIDTH SEPARATE FROM HEIGHT</string>
+    <string name="fragment_light_editor_uniform_dimensions_on">WIDTH LOCKED TO HEIGHT</string>
+    <string name="fragment_light_editor_property_visible_header">VISIBILITY STAGES</string>
+    <string name="fragment_light_editor_property_color_header">COLOR STAGES</string>
+    <string name="fragment_light_editor_property_position_header">POSITION STAGES</string>
+    <string name="fragment_light_editor_property_dimensions_header">DIMENSIONS STAGES</string>
+    <string name="fragment_light_editor_property_angle_header">ROTATION STAGES</string>
+
+    <string name="dialog_aabb_editor_min_x">X (Min)</string>
+    <string name="dialog_aabb_editor_max_x">X (Max)</string>
+    <string name="dialog_aabb_editor_min_y">Y (Min)</string>
+    <string name="dialog_aabb_editor_max_y">Y (Max)</string>
+
+    <string name="dialog_property_editor_stage_duration">Duration (in frames):</string>
+    <string name="dialog_property_editor_stage_transition">Transition:</string>
+    <string name="dialog_property_editor_stage_transition_none">Start only</string>
+    <string name="dialog_property_editor_stage_transition_instant">End only</string>
+    <string name="dialog_property_editor_stage_transition_linear">Linear</string>
+    <string name="dialog_property_editor_stage_transition_sinusoidal">Sinusoidal</string>
+
+    <string name="dialog_visible_editor_visible_label">Light Switch:</string>
+
+    <string name="figure_arrownotched">Notched Arrow</string>
+    <string name="figure_heart">Heart</string>
+    <string name="figure_arrowpentagon">Pentagon Arrow</string>
+    <string name="figure_righttriangle">Right Triangle</string>
+    <string name="figure_triangle">Triangle</string>
+    <string name="figure_star6pt">Six-Point Star</string>
+    <string name="figure_star5ptround">Rounded Five-Point Star</string>
+    <string name="figure_arrowchevron">Chevron Arrow</string>
+    <string name="figure_parallelogram">Parallelogram</string>
+    <string name="figure_octagon">Octagon</string>
+    <string name="figure_star3pt">Three-Point Star</string>
+    <string name="figure_star5pt">Five-Point Star</string>
+    <string name="figure_arrow">Arrow</string>
+    <string name="figure_star4pt">Four-Point Star</string>
+    <string name="figure_trapezoid">Trapezoid</string>
+    <string name="figure_hexagon">Hexagon</string>
+    <string name="figure_pentagon">Pentagon</string>
+    <string name="figure_ellipse">Ellipse</string>
+    <string name="figure_rectangle">Rectangle</string>
+
+    <string name="dialog_light_editor_figure_shapes">SHAPE</string>
+    <string name="dialog_light_editor_figure_text">TEXT</string>
+    <string name="dialog_light_editor_figure_align_left">Left</string>
+    <string name="dialog_light_editor_figure_align_center">Center</string>
+    <string name="dialog_light_editor_figure_align_right">Right</string>
+    <string name="dialog_light_editor_figure_pivot_x">Pivot X</string>
+    <string name="dialog_light_editor_figure_pivot_y">Pivot Y</string>
+    <string name="dialog_light_editor_figure_default_pivot">Use default pivot of figure</string>
+    <string name="dialog_light_editor_figure_selection_label">Selected Figure:</string>
+
+    <string name="stage_visible_state_on">ON</string>
+    <string name="stage_visible_state_off">OFF</string>
+    <string name="stage_transition_none">START ONLY</string>
+    <string name="stage_transition_instant">END ONLY</string>
+    <string name="stage_transition_linear">LINEAR</string>
+    <string name="stage_transition_sinusoidal">SINUSOIDAL</string>
+
+    <string name="error_pattern_layer_selection_invisible">No sense in editing an invisible layer!</string>
+    <string name="error_layer_section_selection_invisible">No sense in editing an invisible section!</string>
+    <string name="error_section_light_selection_invisible">No sense in editing an unlit light!</string>
+    <string name="error_light_property_stage_deletion_one">We need at least one stage here!</string>
+    <string name="title_activity_splash">SplashActivity</string>
+</resources>

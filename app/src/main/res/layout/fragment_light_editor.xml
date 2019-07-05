@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_light_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/fragment_light_nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/light_editor_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageButton
+                android:id="@+id/light_name_edit_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/blue"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <TextView
+                android:id="@+id/light_name_label"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:background="@color/blue"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_light_editor_name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/light_name_text_view"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@color/dark_blue"
+                android:ellipsize="end"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:scrollHorizontally="true"
+                android:text="Light Name"
+                app:layout_constraintEnd_toStartOf="@+id/light_name_edit_button"
+                app:layout_constraintStart_toEndOf="@+id/light_name_label"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/light_figure_edit_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/green"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/light_name_edit_button"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <TextView
+                android:id="@+id/light_figure_label"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:background="@color/green"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_light_editor_figure"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/light_name_label" />
+
+            <TextView
+                android:id="@+id/light_figure_text_view"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@color/dark_green"
+                android:ellipsize="end"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:paddingEnd="16dp"
+                android:scrollHorizontally="true"
+                app:layout_constraintEnd_toStartOf="@+id/light_figure_edit_button"
+                app:layout_constraintStart_toEndOf="@+id/light_figure_image_view"
+                app:layout_constraintTop_toBottomOf="@id/light_name_text_view"
+                tools:text="Figure Name" />
+
+            <TextView
+                android:id="@+id/light_uniform_dimensions_label"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:background="@color/purple"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_light_editor_uniform_dimensions"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/light_figure_label" />
+
+            <Switch
+                android:id="@+id/light_uniform_dimensions_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@color/dark_purple"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingEnd="8dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/light_figure_edit_button" />
+
+            <TextView
+                android:id="@+id/light_uniform_dimensions_text_view"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@color/dark_purple"
+                android:ellipsize="end"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center|right"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:scrollHorizontally="true"
+                android:text="@string/fragment_light_editor_uniform_dimensions_on"
+                app:layout_constraintEnd_toStartOf="@+id/light_uniform_dimensions_switch"
+                app:layout_constraintStart_toEndOf="@+id/light_uniform_dimensions_label"
+                app:layout_constraintTop_toBottomOf="@id/light_figure_text_view" />
+
+            <TextView
+                android:id="@+id/light_outline_label"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:background="@color/orange"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="OUTLINE"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/light_uniform_dimensions_label" />
+
+            <SeekBar
+                android:id="@+id/light_outline_seek_bar"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@color/dark_orange"
+                android:max="105"
+                app:layout_constraintEnd_toStartOf="@+id/light_outline_status_text_view"
+                app:layout_constraintStart_toEndOf="@+id/light_outline_label"
+                app:layout_constraintTop_toBottomOf="@+id/light_uniform_dimensions_text_view" />
+
+            <TextView
+                android:id="@+id/light_outline_status_text_view"
+                android:layout_width="36dp"
+                android:layout_height="48dp"
+                android:background="@color/dark_orange"
+                android:gravity="center|left"
+                android:text="Off"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/light_uniform_dimensions_switch" />
+
+            <TextView
+                android:id="@+id/light_property_header_text_view"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/header_color"
+                android:drawableStart="@drawable/ic_down_small"
+                android:drawableEnd="@drawable/ic_down_small"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/fragment_light_editor_property_color_header"
+                android:textColor="@color/header_text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/light_outline_label" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/light_property_stage_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/light_property_button_layout" />
+
+            <Button
+                android:id="@+id/light_property_stage_add_button"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/header_color"
+                android:backgroundTintMode="src_in"
+                android:drawableStart="@drawable/ic_add_small"
+                android:drawableEnd="@drawable/ic_add_small"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/fragment_light_editor_add_stage_color"
+                android:textColor="@color/header_text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/light_property_stage_recycler_view" />
+
+            <ImageView
+                android:id="@+id/light_figure_image_view"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:background="@color/dark_green"
+                android:padding="8dp"
+                app:layout_constraintStart_toEndOf="@+id/light_figure_label"
+                app:layout_constraintTop_toBottomOf="@+id/light_name_text_view"
+                app:srcCompat="@drawable/ic_star5pt" />
+
+            <LinearLayout
+                android:id="@+id/light_property_button_layout"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/light_property_header_text_view">
+
+                <ImageButton
+                    android:id="@+id/light_property_visible_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/property_visible"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_property_unselected_visible" />
+
+                <ImageButton
+                    android:id="@+id/light_property_color_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/property_color"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_property_unselected_color" />
+
+                <ImageButton
+                    android:id="@+id/light_property_position_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/property_position"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_property_unselected_position" />
+
+                <ImageButton
+                    android:id="@+id/light_property_dimensions_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/property_dimensions"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_property_unselected_dimensions" />
+
+                <ImageButton
+                    android:id="@+id/light_property_angle_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/property_angle"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_property_unselected_angle" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

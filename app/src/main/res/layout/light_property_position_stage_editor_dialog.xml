@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/light_property_position_stage_editor_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/light_property_position_stage_editor_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/light_property_position_stage_editor_title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/light_property_position_stage_editor_confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/holo_green_dark"
+            android:text="Confirm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/light_property_position_stage_editor_guideline_mid"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_transition_label" />
+
+        <Button
+            android:id="@+id/light_property_position_stage_editor_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/holo_red_dark"
+            android:text="Cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toStartOf="@+id/light_property_position_stage_editor_guideline_mid"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_transition_label" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/light_property_position_stage_editor_guideline_mid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/light_property_position_stage_editor_guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25304136" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/light_property_position_stage_editor_guideline_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/light_property_position_stage_editor_guideline_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="300dp" />
+
+        <TextView
+            android:id="@+id/light_property_position_stage_editor_start_x_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Start X"
+            app:layout_constraintEnd_toStartOf="@+id/light_property_position_stage_editor_guideline_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_surface_view" />
+
+        <TextView
+            android:id="@+id/light_property_position_stage_editor_start_y_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Start Y"
+            app:layout_constraintEnd_toStartOf="@+id/light_property_position_stage_editor_guideline_mid"
+            app:layout_constraintStart_toStartOf="@+id/light_property_position_stage_editor_guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_surface_view" />
+
+        <TextView
+            android:id="@+id/light_property_position_stage_editor_end_x_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="End X"
+            app:layout_constraintEnd_toStartOf="@+id/light_property_position_stage_editor_guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/light_property_position_stage_editor_guideline_mid"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_surface_view" />
+
+        <TextView
+            android:id="@+id/light_property_position_stage_editor_end_y_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="End Y"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/light_property_position_stage_editor_guideline_right"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_surface_view" />
+
+        <EditText
+            android:id="@+id/light_property_position_stage_editor_start_x_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom|center"
+            android:ems="10"
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintEnd_toStartOf="@+id/light_property_position_stage_editor_guideline_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_start_x_label" />
+
+        <EditText
+            android:id="@+id/light_property_position_stage_editor_start_y_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom|center"
+            android:ems="10"
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintEnd_toStartOf="@+id/light_property_position_stage_editor_guideline_mid"
+            app:layout_constraintStart_toStartOf="@+id/light_property_position_stage_editor_guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_start_y_label" />
+
+        <EditText
+            android:id="@+id/light_property_position_stage_editor_end_x_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom|center"
+            android:ems="10"
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintEnd_toStartOf="@+id/light_property_position_stage_editor_guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/light_property_position_stage_editor_guideline_mid"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_end_x_label" />
+
+        <EditText
+            android:id="@+id/light_property_position_stage_editor_end_y_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom|center"
+            android:ems="10"
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/light_property_position_stage_editor_guideline_right"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_end_y_label" />
+
+        <com.bluelithalo.lumnart.editor.LightPositionSurfaceView
+            android:id="@+id/light_property_position_stage_editor_surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:background="#000000"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_title_view" />
+
+        <TextView
+            android:id="@+id/light_property_position_stage_editor_duration_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/dialog_property_editor_stage_duration"
+            app:layout_constraintEnd_toStartOf="@+id/light_property_position_stage_editor_guideline_mid"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_start_x_edit_text" />
+
+        <EditText
+            android:id="@+id/light_property_position_stage_editor_duration_edit_text"
+            android:layout_width="64dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:gravity="bottom|center"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/light_property_position_stage_editor_transition_spinner"
+            app:layout_constraintStart_toStartOf="@+id/light_property_position_stage_editor_guideline_mid"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_end_x_edit_text"
+            app:layout_constraintVertical_bias="0.75" />
+
+        <TextView
+            android:id="@+id/light_property_position_stage_editor_transition_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/dialog_property_editor_stage_transition"
+            app:layout_constraintEnd_toStartOf="@+id/light_property_position_stage_editor_guideline_mid"
+            app:layout_constraintTop_toBottomOf="@+id/light_property_position_stage_editor_duration_label" />
+
+        <Spinner
+            android:id="@+id/light_property_position_stage_editor_transition_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/light_property_position_stage_editor_transition_label"
+            app:layout_constraintStart_toStartOf="@+id/light_property_position_stage_editor_guideline_mid"
+            app:layout_constraintTop_toTopOf="@+id/light_property_position_stage_editor_transition_label"
+            app:layout_constraintVertical_bias="0.25" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

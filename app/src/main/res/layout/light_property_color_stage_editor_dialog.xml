@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/light_property_color_stage_editor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="(dialog title goes here)"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_start_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="START"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintStart_toStartOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_color_stage_editor_title_text_view" />
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_end_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="END"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintStart_toStartOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_color_stage_editor_start_view" />
+
+    <View
+        android:id="@+id/light_property_color_stage_editor_start_view"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#E17D4BAF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_color_stage_editor_start_label" />
+
+    <View
+        android:id="@+id/light_property_color_stage_editor_end_view"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#FA96C832"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_color_stage_editor_end_label" />
+
+
+    <SeekBar
+        android:id="@+id/light_property_color_stage_editor_start_r_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:max="255"
+        android:progress="125"
+        android:progressBackgroundTint="#FF0000"
+        android:progressTint="#960000"
+        android:thumbTint="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_color_stage_editor_start_r_progress_text_view"
+        app:layout_constraintStart_toEndOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/light_property_color_stage_editor_start_g_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="75"
+        android:progressBackgroundTint="#00FF00"
+        android:progressTint="#009600"
+        android:thumbTint="#00FF00"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_color_stage_editor_start_g_progress_text_view"
+        app:layout_constraintStart_toEndOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintVertical_bias="0.3333333" />
+
+    <SeekBar
+        android:id="@+id/light_property_color_stage_editor_start_b_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="175"
+        android:progressBackgroundTint="#0000FF"
+        android:progressTint="#000096"
+        android:thumbTint="#0000FF"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_color_stage_editor_start_b_progress_text_view"
+        app:layout_constraintStart_toEndOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintVertical_bias="0.6666667" />
+
+    <SeekBar
+        android:id="@+id/light_property_color_stage_editor_start_a_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="225"
+        android:progressBackgroundTint="#FFFFFF"
+        android:progressTint="#969696"
+        android:thumbTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_color_stage_editor_start_a_progress_text_view"
+        app:layout_constraintStart_toEndOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_start_view"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_start_r_progress_text_view"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="255"
+        android:textColor="#FF9696"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_start_r_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_start_r_seek_bar" />
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_start_g_progress_text_view"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="255"
+        android:textColor="#96FF96"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_start_g_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_start_g_seek_bar" />
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_start_b_progress_text_view"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="255"
+        android:textColor="#9696FF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_start_b_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_start_b_seek_bar" />
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_start_a_progress_text_view"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="255"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_start_a_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_start_a_seek_bar" />
+
+    <SeekBar
+        android:id="@+id/light_property_color_stage_editor_end_r_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:max="255"
+        android:progress="125"
+        android:progressBackgroundTint="#FF0000"
+        android:progressTint="#960000"
+        android:thumbTint="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_color_stage_editor_end_r_progress_text_view"
+        app:layout_constraintStart_toEndOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/light_property_color_stage_editor_end_g_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="75"
+        android:progressBackgroundTint="#00FF00"
+        android:progressTint="#009600"
+        android:thumbTint="#00FF00"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_color_stage_editor_end_g_progress_text_view"
+        app:layout_constraintStart_toEndOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintVertical_bias="0.3333333" />
+
+    <SeekBar
+        android:id="@+id/light_property_color_stage_editor_end_b_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="175"
+        android:progressBackgroundTint="#0000FF"
+        android:progressTint="#000096"
+        android:thumbTint="#0000FF"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_color_stage_editor_end_b_progress_text_view"
+        app:layout_constraintStart_toEndOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintVertical_bias="0.6666667" />
+
+    <SeekBar
+        android:id="@+id/light_property_color_stage_editor_end_a_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="225"
+        android:progressBackgroundTint="#FFFFFF"
+        android:progressTint="#969696"
+        android:thumbTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_color_stage_editor_end_a_progress_text_view"
+        app:layout_constraintStart_toEndOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_end_view"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_end_r_progress_text_view"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="255"
+        android:textColor="#FF9696"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_end_r_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_end_r_seek_bar" />
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_end_g_progress_text_view"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="255"
+        android:textColor="#96FF96"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_end_g_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_end_g_seek_bar" />
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_end_b_progress_text_view"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="255"
+        android:textColor="#9696FF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_end_b_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_end_b_seek_bar" />
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_end_a_progress_text_view"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="255"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_end_a_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_end_a_seek_bar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/light_property_color_stage_editor_mid_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/light_property_color_stage_editor_confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_color_stage_editor_mid_guideline"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_color_stage_editor_transition_label" />
+
+    <Button
+        android:id="@+id/light_property_color_stage_editor_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toStartOf="@+id/light_property_color_stage_editor_mid_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_color_stage_editor_transition_label" />
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_duration_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dialog_property_editor_stage_duration"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_color_stage_editor_mid_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_color_stage_editor_end_view" />
+
+    <EditText
+        android:id="@+id/light_property_color_stage_editor_duration_edit_text"
+        android:layout_width="64dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/light_property_color_stage_editor_transition_spinner"
+        app:layout_constraintStart_toStartOf="@+id/light_property_color_stage_editor_mid_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_color_stage_editor_end_a_seek_bar"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <TextView
+        android:id="@+id/light_property_color_stage_editor_transition_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dialog_property_editor_stage_transition"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_color_stage_editor_mid_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_color_stage_editor_duration_label" />
+
+    <Spinner
+        android:id="@+id/light_property_color_stage_editor_transition_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_color_stage_editor_transition_label"
+        app:layout_constraintStart_toStartOf="@+id/light_property_color_stage_editor_mid_guideline"
+        app:layout_constraintTop_toTopOf="@+id/light_property_color_stage_editor_transition_label"
+        app:layout_constraintVertical_bias="0.25" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

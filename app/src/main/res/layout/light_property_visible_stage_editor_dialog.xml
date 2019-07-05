@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/light_property_visible_stage_editor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/light_property_visible_stage_editor_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/light_property_visible_stage_editor_confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_visible_stage_editor_guideline_mid"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_visible_stage_editor_duration_edit_text" />
+
+    <Button
+        android:id="@+id/light_property_visible_stage_editor_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="@+id/light_property_visible_stage_editor_guideline_mid"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_visible_stage_editor_duration_edit_text" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/light_property_visible_stage_editor_guideline_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Switch
+        android:id="@+id/light_property_visible_stage_editor_visible_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_visible_stage_editor_visible_label"
+        app:layout_constraintStart_toStartOf="@+id/light_property_visible_stage_editor_guideline_mid"
+        app:layout_constraintTop_toTopOf="@+id/light_property_visible_stage_editor_visible_label" />
+
+    <TextView
+        android:id="@+id/light_property_visible_stage_editor_duration_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/dialog_property_editor_stage_duration"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_visible_stage_editor_guideline_mid"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_visible_stage_editor_visible_label" />
+
+    <EditText
+        android:id="@+id/light_property_visible_stage_editor_duration_edit_text"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/light_property_visible_stage_editor_duration_label"
+        app:layout_constraintStart_toStartOf="@+id/light_property_visible_stage_editor_guideline_mid"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_visible_stage_editor_visible_switch" />
+
+    <TextView
+        android:id="@+id/light_property_visible_stage_editor_visible_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dialog_visible_editor_visible_label"
+        app:layout_constraintEnd_toStartOf="@+id/light_property_visible_stage_editor_guideline_mid"
+        app:layout_constraintTop_toBottomOf="@+id/light_property_visible_stage_editor_title_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
