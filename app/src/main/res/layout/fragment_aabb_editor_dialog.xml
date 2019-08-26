@@ -133,7 +133,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="bottom|center"
-        android:inputType="numberDecimal|numberSigned"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toStartOf="@+id/aabb_dialog_guideline_left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_min_x_label" />
@@ -145,7 +145,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="bottom|center"
-        android:inputType="numberDecimal|numberSigned"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toStartOf="@+id/aabb_dialog_guideline_right"
         app:layout_constraintStart_toStartOf="@+id/aabb_dialog_guideline_mid"
         app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_max_x_label" />
@@ -157,7 +157,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="bottom|center"
-        android:inputType="numberDecimal|numberSigned"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toStartOf="@+id/aabb_dialog_guideline_mid"
         app:layout_constraintStart_toStartOf="@+id/aabb_dialog_guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_min_y_label" />
@@ -169,7 +169,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="bottom|center"
-        android:inputType="numberDecimal|numberSigned"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/aabb_dialog_guideline_right"
         app:layout_constraintTop_toBottomOf="@+id/aabb_dialog_max_y_label" />

@@ -236,12 +236,12 @@ public class LightFigureDialogFragment extends DialogFragment
         switch(selectedFigure)
         {
             case SHAPE:
-                pivotXEditText.setText(Float.toString(figure.getPivot()[0]));
-                pivotYEditText.setText(Float.toString(figure.getPivot()[1]));
+                pivotXEditText.setText(Integer.toString(Math.round(figure.getPivot()[0] * 100.0f)));
+                pivotYEditText.setText(Integer.toString(Math.round(figure.getPivot()[1] * 100.0f)));
                 break;
             case TEXT:
-                pivotXEditText.setText(Float.toString(textFigure.getPivot()[0]));
-                pivotYEditText.setText(Float.toString(textFigure.getPivot()[1]));
+                pivotXEditText.setText(Integer.toString(Math.round(textFigure.getPivot()[0] * 100.0f)));
+                pivotYEditText.setText(Integer.toString(Math.round(textFigure.getPivot()[1] * 100.0f)));
                 break;
         }
 
@@ -375,8 +375,8 @@ public class LightFigureDialogFragment extends DialogFragment
     {
         try
         {
-            float pivotX = Float.parseFloat(pivotXEditText.getText().toString());
-            float pivotY = Float.parseFloat(pivotYEditText.getText().toString());
+            float pivotX = Integer.parseInt(pivotXEditText.getText().toString()) / 100.0f;
+            float pivotY = Integer.parseInt(pivotYEditText.getText().toString()) / 100.0f;
 
             if (selectedFigure == Figure.Type.SHAPE)
             {

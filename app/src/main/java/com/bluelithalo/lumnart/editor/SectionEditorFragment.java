@@ -124,10 +124,10 @@ public class SectionEditorFragment extends Fragment implements  EditTextDialogFr
         nameEditButton.setClickable(true);
 
         AABB aabb = section.getBoundingBox();
-        String aabbText = "[" + String.format("%.3f", aabb.getMinimumX()) + ", " +
-                                String.format("%.3f", aabb.getMinimumY()) + "] --> [" +
-                                String.format("%.3f", aabb.getMaximumX()) + ", " +
-                                String.format("%.3f", aabb.getMaximumY()) + "]";
+        String aabbText = "[" + Math.round(aabb.getMinimumX() * 1000) + ", " +
+                                Math.round(aabb.getMinimumY() * 1000) + "] --> [" +
+                                Math.round(aabb.getMaximumX() * 1000) + ", " +
+                                Math.round(aabb.getMaximumY() * 1000) + "]";
 
         aabbTextView = (TextView) view.findViewById(R.id.section_aabb_text_view);
         aabbTextView.setText(aabbText);
@@ -251,10 +251,10 @@ public class SectionEditorFragment extends Fragment implements  EditTextDialogFr
     {
         if (inputPrompt.equals(SET_SECTION_AABB))
         {
-            String inputAABBText = "[" + String.format("%.3f", inputAABB.getMinimumX()) + ", " +
-                    String.format("%.3f", inputAABB.getMinimumY()) + "] --> [" +
-                    String.format("%.3f", inputAABB.getMaximumX()) + ", " +
-                    String.format("%.3f", inputAABB.getMaximumY()) + "]";
+            String inputAABBText = "[" + Math.round(inputAABB.getMinimumX() * 1000) + ", " +
+                                         Math.round(inputAABB.getMinimumY() * 1000) + "] --> [" +
+                                         Math.round(inputAABB.getMaximumX() * 1000) + ", " +
+                                         Math.round(inputAABB.getMaximumY() * 1000) + "]";
 
             //Log.i("SectionEditorFragment", inputAABBText);
 

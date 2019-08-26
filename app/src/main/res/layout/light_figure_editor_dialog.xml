@@ -105,6 +105,7 @@
         android:ems="10"
         android:gravity="bottom|center"
         android:inputType="textPersonName"
+        android:imeOptions="flagForceAscii"
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="@+id/light_figure_editor_dialog_text_label"
         app:layout_constraintEnd_toEndOf="parent"
@@ -176,25 +177,25 @@
 
     <EditText
         android:id="@+id/light_figure_editor_dialog_pivot_x_edit_text"
-        android:layout_width="64dp"
+        android:layout_width="96dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:gravity="bottom|center"
-        android:inputType="numberDecimal|numberSigned"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toStartOf="@+id/light_figure_editor_dialog_guideline_mid"
         app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_pivot_x_label" />
 
     <EditText
         android:id="@+id/light_figure_editor_dialog_pivot_y_edit_text"
-        android:layout_width="64dp"
+        android:layout_width="96dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="bottom|center"
-        android:inputType="numberDecimal|numberSigned"
+        android:inputType="numberSigned"
         app:layout_constraintStart_toStartOf="@+id/light_figure_editor_dialog_guideline_mid"
         app:layout_constraintTop_toBottomOf="@+id/light_figure_editor_dialog_pivot_y_label" />
 

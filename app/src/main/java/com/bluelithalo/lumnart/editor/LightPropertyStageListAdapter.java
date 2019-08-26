@@ -360,10 +360,10 @@ public class LightPropertyStageListAdapter extends RecyclerView.Adapter<Recycler
         float[] endPosition = stage.getEndVector();
         final int pos = position;
 
-        viewHolder.positionStageStartXTextView.setText(String.format("%.3f", startPosition[0]));
-        viewHolder.positionStageStartYTextView.setText(String.format("%.3f", startPosition[1]));
-        viewHolder.positionStageEndXTextView.setText(String.format("%.3f", endPosition[0]));
-        viewHolder.positionStageEndYTextView.setText(String.format("%.3f", endPosition[1]));
+        viewHolder.positionStageStartXTextView.setText(Integer.toString(Math.round(startPosition[0] * 1000.0f)));
+        viewHolder.positionStageStartYTextView.setText(Integer.toString(Math.round(startPosition[1] * 1000.0f)));
+        viewHolder.positionStageEndXTextView.setText(Integer.toString(Math.round(endPosition[0] * 1000.0f)));
+        viewHolder.positionStageEndYTextView.setText(Integer.toString(Math.round(endPosition[1] * 1000.0f)));
 
         String stageLengthString = Integer.toString(stage.getDuration());
         viewHolder.positionStageLengthTextView.setText(stageLengthString);
@@ -421,10 +421,10 @@ public class LightPropertyStageListAdapter extends RecyclerView.Adapter<Recycler
         float[] endDimensions = stage.getEndVector();
         final int pos = position;
 
-        viewHolder.dimensionsStageStartWidthTextView.setText(String.format("%.3f", startDimensions[0]));
-        viewHolder.dimensionsStageStartHeightTextView.setText(String.format("%.3f", startDimensions[1]));
-        viewHolder.dimensionsStageEndWidthTextView.setText(String.format("%.3f", endDimensions[0]));
-        viewHolder.dimensionsStageEndHeightTextView.setText(String.format("%.3f", endDimensions[1]));
+        viewHolder.dimensionsStageStartWidthTextView.setText(Integer.toString(Math.round(startDimensions[0] * 1000.0f)));
+        viewHolder.dimensionsStageStartHeightTextView.setText(Integer.toString(Math.round(startDimensions[1] * 1000.0f)));
+        viewHolder.dimensionsStageEndWidthTextView.setText(Integer.toString(Math.round(endDimensions[0] * 1000.0f)));
+        viewHolder.dimensionsStageEndHeightTextView.setText(Integer.toString(Math.round(endDimensions[1] * 1000.0f)));
 
         String stageLengthString = Integer.toString(stage.getDuration());
         viewHolder.dimensionsStageLengthTextView.setText(stageLengthString);

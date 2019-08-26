@@ -115,7 +115,7 @@ public class AABBDialogFragment extends DialogFragment implements AABBSurfaceVie
         aabbSurfaceView.setOnAABBEditListener(this);
 
         minXEditText = (EditText) view.findViewById(R.id.aabb_dialog_min_x_edit_text);
-        minXEditText.setText(Float.toString(aabb.getMinimumX()));
+        minXEditText.setText(Integer.toString(Math.round(aabb.getMinimumX() * 1000)));
         minXEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
@@ -129,7 +129,7 @@ public class AABBDialogFragment extends DialogFragment implements AABBSurfaceVie
 
                 try
                 {
-                    minX = Float.parseFloat(s.toString());
+                    minX = Integer.parseInt(s.toString()) / 1000.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -143,7 +143,7 @@ public class AABBDialogFragment extends DialogFragment implements AABBSurfaceVie
         });
 
         maxXEditText = (EditText) view.findViewById(R.id.aabb_dialog_max_x_edit_text);
-        maxXEditText.setText(Float.toString(aabb.getMaximumX()));
+        maxXEditText.setText(Integer.toString(Math.round(aabb.getMaximumX() * 1000)));
         maxXEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
@@ -159,7 +159,7 @@ public class AABBDialogFragment extends DialogFragment implements AABBSurfaceVie
 
                 try
                 {
-                    maxX = Float.parseFloat(s.toString());
+                    maxX = Integer.parseInt(s.toString()) / 1000.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -173,7 +173,7 @@ public class AABBDialogFragment extends DialogFragment implements AABBSurfaceVie
         });
 
         minYEditText = (EditText) view.findViewById(R.id.aabb_dialog_min_y_edit_text);
-        minYEditText.setText(Float.toString(aabb.getMinimumY()));
+        minYEditText.setText(Integer.toString(Math.round(aabb.getMinimumY() * 1000)));
         minYEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
@@ -189,7 +189,7 @@ public class AABBDialogFragment extends DialogFragment implements AABBSurfaceVie
 
                 try
                 {
-                    minY = Float.parseFloat(s.toString());
+                    minY = Integer.parseInt(s.toString()) / 1000.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -203,7 +203,7 @@ public class AABBDialogFragment extends DialogFragment implements AABBSurfaceVie
         });
 
         maxYEditText = (EditText) view.findViewById(R.id.aabb_dialog_max_y_edit_text);
-        maxYEditText.setText(Float.toString(aabb.getMaximumY()));
+        maxYEditText.setText(Integer.toString(Math.round(aabb.getMaximumY() * 1000)));
         maxYEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
@@ -219,7 +219,7 @@ public class AABBDialogFragment extends DialogFragment implements AABBSurfaceVie
 
                 try
                 {
-                    maxY = Float.parseFloat(s.toString());
+                    maxY = Integer.parseInt(s.toString()) / 1000.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -268,10 +268,10 @@ public class AABBDialogFragment extends DialogFragment implements AABBSurfaceVie
     {
         try
         {
-            float minX = Float.parseFloat(minXEditText.getText().toString());
-            float maxX = Float.parseFloat(maxXEditText.getText().toString());
-            float minY = Float.parseFloat(minYEditText.getText().toString());
-            float maxY = Float.parseFloat(maxYEditText.getText().toString());
+            float minX = Integer.parseInt(minXEditText.getText().toString()) / 1000.0f;
+            float maxX = Integer.parseInt(maxXEditText.getText().toString()) / 1000.0f;
+            float minY = Integer.parseInt(minYEditText.getText().toString()) / 1000.0f;
+            float maxY = Integer.parseInt(maxYEditText.getText().toString()) / 1000.0f;
 
             aabb.setMinimumX(Math.min(minX, maxX));
             aabb.setMaximumX(Math.max(minX, maxX));
@@ -306,10 +306,10 @@ public class AABBDialogFragment extends DialogFragment implements AABBSurfaceVie
     @Override
     public void onEditAABB(AABB editedAABB)
     {
-        minXEditText.setText(String.format("%.3f", editedAABB.getMinimumX()));
-        maxXEditText.setText(String.format("%.3f", editedAABB.getMaximumX()));
-        minYEditText.setText(String.format("%.3f", editedAABB.getMinimumY()));
-        maxYEditText.setText(String.format("%.3f", editedAABB.getMaximumY()));
+        minXEditText.setText(Integer.toString(Math.round(editedAABB.getMinimumX() * 1000)));
+        maxXEditText.setText(Integer.toString(Math.round(editedAABB.getMaximumX() * 1000)));
+        minYEditText.setText(Integer.toString(Math.round(editedAABB.getMinimumY() * 1000)));
+        maxYEditText.setText(Integer.toString(Math.round(editedAABB.getMaximumY() * 1000)));
     }
 
     public interface OnConfirmAABBListener

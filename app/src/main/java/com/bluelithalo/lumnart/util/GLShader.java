@@ -151,7 +151,7 @@ public class GLShader
 
         if (GLES20.glGetError() != GLES20.GL_NO_ERROR)
         {
-            //Log.e("GLShader", "Failed to initialize shader program.");
+            Log.e("GLShader", "Failed to initialize shader program.");
         }
     }
 
@@ -203,7 +203,6 @@ public class GLShader
             case COLOR:
                 uniform = uColor;
                 break;
-
             case SECTION_AABB:
                 uniform = uSectionAABB;
                 break;

@@ -130,7 +130,7 @@ public class LightPositionStageDialogFragment extends DialogFragment implements 
         touchEditSurfaceView.setOnLightPositionEditListener(this);
 
         startXEditText = (EditText) view.findViewById(R.id.light_property_position_stage_editor_start_x_edit_text);
-        startXEditText.setText(Float.toString(positionStage.getStartVector()[0]));
+        startXEditText.setText(Integer.toString(Math.round(positionStage.getStartVector()[0] * 1000.0f)));
         startXEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
@@ -143,7 +143,7 @@ public class LightPositionStageDialogFragment extends DialogFragment implements 
 
                 try
                 {
-                    startPosition[0] = Float.parseFloat(s.toString());
+                    startPosition[0] = Integer.parseInt(s.toString()) / 1000.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -155,7 +155,7 @@ public class LightPositionStageDialogFragment extends DialogFragment implements 
         });
 
         startYEditText = (EditText) view.findViewById(R.id.light_property_position_stage_editor_start_y_edit_text);
-        startYEditText.setText(Float.toString(positionStage.getStartVector()[1]));
+        startYEditText.setText(Integer.toString(Math.round(positionStage.getStartVector()[1] * 1000.0f)));
         startYEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
@@ -168,7 +168,7 @@ public class LightPositionStageDialogFragment extends DialogFragment implements 
 
                 try
                 {
-                    startPosition[1] = Float.parseFloat(s.toString());
+                    startPosition[1] = Integer.parseInt(s.toString()) / 1000.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -180,7 +180,7 @@ public class LightPositionStageDialogFragment extends DialogFragment implements 
         });
 
         endXEditText = (EditText) view.findViewById(R.id.light_property_position_stage_editor_end_x_edit_text);
-        endXEditText.setText(Float.toString(positionStage.getEndVector()[0]));
+        endXEditText.setText(Integer.toString(Math.round(positionStage.getEndVector()[0] * 1000.0f)));
         endXEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
@@ -193,7 +193,7 @@ public class LightPositionStageDialogFragment extends DialogFragment implements 
 
                 try
                 {
-                    endPosition[0] = Float.parseFloat(s.toString());
+                    endPosition[0] = Integer.parseInt(s.toString()) / 1000.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -205,7 +205,7 @@ public class LightPositionStageDialogFragment extends DialogFragment implements 
         });
 
         endYEditText = (EditText) view.findViewById(R.id.light_property_position_stage_editor_end_y_edit_text);
-        endYEditText.setText(Float.toString(positionStage.getEndVector()[1]));
+        endYEditText.setText(Integer.toString(Math.round(positionStage.getEndVector()[1] * 1000.0f)));
         endYEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
@@ -218,7 +218,7 @@ public class LightPositionStageDialogFragment extends DialogFragment implements 
 
                 try
                 {
-                    endPosition[1] = Float.parseFloat(s.toString());
+                    endPosition[1] = Integer.parseInt(s.toString()) / 1000.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -273,8 +273,8 @@ public class LightPositionStageDialogFragment extends DialogFragment implements 
     {
         try
         {
-            float[] startVector = new float[]{Float.parseFloat(startXEditText.getText().toString()), Float.parseFloat(startYEditText.getText().toString())};
-            float[] endVector = new float[]{Float.parseFloat(endXEditText.getText().toString()), Float.parseFloat(endYEditText.getText().toString())};
+            float[] startVector = new float[]{Integer.parseInt(startXEditText.getText().toString()) / 1000.0f, Integer.parseInt(startYEditText.getText().toString()) / 1000.0f};
+            float[] endVector = new float[]{Integer.parseInt(endXEditText.getText().toString()) / 1000.0f, Integer.parseInt(endYEditText.getText().toString()) / 1000.0f};
 
             int duration = Integer.parseInt(durationEditText.getText().toString());
             if (duration <= 0)
@@ -319,10 +319,10 @@ public class LightPositionStageDialogFragment extends DialogFragment implements 
     @Override
     public void onEditLightPosition(float[] editedStartPosition, float[] editedEndPosition)
     {
-        startXEditText.setText(String.format("%.3f", editedStartPosition[0]));
-        startYEditText.setText(String.format("%.3f", editedStartPosition[1]));
-        endXEditText.setText(String.format("%.3f", editedEndPosition[0]));
-        endYEditText.setText(String.format("%.3f", editedEndPosition[1]));
+        startXEditText.setText(Integer.toString(Math.round(editedStartPosition[0] * 1000.0f)));
+        startYEditText.setText(Integer.toString(Math.round(editedStartPosition[1] * 1000.0f)));
+        endXEditText.setText(Integer.toString(Math.round(editedEndPosition[0] * 1000.0f)));
+        endYEditText.setText(Integer.toString(Math.round(editedEndPosition[1] * 1000.0f)));
     }
 
     public interface OnConfirmLightPositionStageListener

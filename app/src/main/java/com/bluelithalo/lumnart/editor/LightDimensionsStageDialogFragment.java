@@ -148,7 +148,7 @@ public class LightDimensionsStageDialogFragment extends DialogFragment implement
         });
 
         startWEditText = (EditText) view.findViewById(R.id.light_property_dimensions_stage_editor_start_w_edit_text);
-        startWEditText.setText(Float.toString(dimensionsStage.getStartVector()[0]));
+        startWEditText.setText(Integer.toString(Math.round(dimensionsStage.getStartVector()[0] * 1000.0f)));
         startWEditText.setFocusable(!uniformDimensions);
         startWEditText.setEnabled(!uniformDimensions);
         startWEditText.addTextChangedListener(new TextWatcher()
@@ -164,7 +164,7 @@ public class LightDimensionsStageDialogFragment extends DialogFragment implement
 
                 try
                 {
-                    startDimensions[0] = Float.parseFloat(s.toString());
+                    startDimensions[0] = Integer.parseInt(s.toString()) / 1000.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -176,7 +176,7 @@ public class LightDimensionsStageDialogFragment extends DialogFragment implement
         });
 
         startHEditText = (EditText) view.findViewById(R.id.light_property_dimensions_stage_editor_start_h_edit_text);
-        startHEditText.setText(Float.toString(dimensionsStage.getStartVector()[1]));
+        startHEditText.setText(Integer.toString(Math.round(dimensionsStage.getStartVector()[1] * 1000.0f)));
         startHEditText.addTextChangedListener(new TextWatcher()
         {
             @Override
@@ -190,7 +190,7 @@ public class LightDimensionsStageDialogFragment extends DialogFragment implement
 
                 try
                 {
-                    startDimensions[1] = Float.parseFloat(s.toString());
+                    startDimensions[1] = Integer.parseInt(s.toString()) / 1000.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -202,7 +202,7 @@ public class LightDimensionsStageDialogFragment extends DialogFragment implement
         });
 
         endWEditText = (EditText) view.findViewById(R.id.light_property_dimensions_stage_editor_end_w_edit_text);
-        endWEditText.setText(Float.toString(dimensionsStage.getEndVector()[0]));
+        endWEditText.setText(Integer.toString(Math.round(dimensionsStage.getEndVector()[0] * 1000.0f)));
         endWEditText.setFocusable(!uniformDimensions);
         endWEditText.setEnabled(!uniformDimensions);
         endWEditText.addTextChangedListener(new TextWatcher()
@@ -218,7 +218,7 @@ public class LightDimensionsStageDialogFragment extends DialogFragment implement
 
                 try
                 {
-                    endDimensions[0] = Float.parseFloat(s.toString());
+                    endDimensions[0] = Integer.parseInt(s.toString()) / 1000.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -230,7 +230,7 @@ public class LightDimensionsStageDialogFragment extends DialogFragment implement
         });
 
         endHEditText = (EditText) view.findViewById(R.id.light_property_dimensions_stage_editor_end_h_edit_text);
-        endHEditText.setText(Float.toString(dimensionsStage.getEndVector()[1]));
+        endHEditText.setText(Integer.toString(Math.round(dimensionsStage.getEndVector()[1] * 1000.0f)));
         endHEditText.addTextChangedListener(new TextWatcher()
         {
             @Override
@@ -244,7 +244,7 @@ public class LightDimensionsStageDialogFragment extends DialogFragment implement
 
                 try
                 {
-                    endDimensions[1] = Float.parseFloat(s.toString());
+                    endDimensions[1] = Integer.parseInt(s.toString()) / 1000.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -299,8 +299,8 @@ public class LightDimensionsStageDialogFragment extends DialogFragment implement
     {
         try
         {
-            float[] startVector = new float[]{Float.parseFloat(startWEditText.getText().toString()), Float.parseFloat(startHEditText.getText().toString())};
-            float[] endVector = new float[]{Float.parseFloat(endWEditText.getText().toString()), Float.parseFloat(endHEditText.getText().toString())};
+            float[] startVector = new float[]{Integer.parseInt(startWEditText.getText().toString()) / 1000.0f, Integer.parseInt(startHEditText.getText().toString()) / 1000.0f};
+            float[] endVector = new float[]{Integer.parseInt(endWEditText.getText().toString()) / 1000.0f, Integer.parseInt(endHEditText.getText().toString()) / 1000.0f};
 
             int duration = Integer.parseInt(durationEditText.getText().toString());
             if (duration <= 0)
@@ -345,10 +345,10 @@ public class LightDimensionsStageDialogFragment extends DialogFragment implement
     @Override
     public void onEditLightDimensions(float[] editedStartDimensions, float[] editedEndDimensions)
     {
-        if (!uniformDimensions) { startWEditText.setText(String.format("%.3f", editedStartDimensions[0])); }
-        startHEditText.setText(String.format("%.3f", editedStartDimensions[1]));
-        if (!uniformDimensions) { endWEditText.setText(String.format("%.3f", editedEndDimensions[0])); }
-        endHEditText.setText(String.format("%.3f", editedEndDimensions[1]));
+        if (!uniformDimensions) { startWEditText.setText(Integer.toString(Math.round(editedStartDimensions[0] * 1000.0f))); }
+        startHEditText.setText(Integer.toString(Math.round(editedStartDimensions[1] * 1000.0f)));
+        if (!uniformDimensions) { endWEditText.setText(Integer.toString(Math.round(editedEndDimensions[0] * 1000.0f))); }
+        endHEditText.setText(Integer.toString(Math.round(editedEndDimensions[1] * 1000.0f)));
     }
 
     public interface OnConfirmLightDimensionsStageListener

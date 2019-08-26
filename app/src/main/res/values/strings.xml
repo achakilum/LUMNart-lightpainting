@@ -102,8 +102,8 @@
     <string name="dialog_light_editor_figure_align_left">Left</string>
     <string name="dialog_light_editor_figure_align_center">Center</string>
     <string name="dialog_light_editor_figure_align_right">Right</string>
-    <string name="dialog_light_editor_figure_pivot_x">Pivot X</string>
-    <string name="dialog_light_editor_figure_pivot_y">Pivot Y</string>
+    <string name="dialog_light_editor_figure_pivot_x">Pivot X (%)</string>
+    <string name="dialog_light_editor_figure_pivot_y">Pivot Y (%)</string>
     <string name="dialog_light_editor_figure_default_pivot">Use default pivot of figure</string>
     <string name="dialog_light_editor_figure_selection_label">Selected Figure:</string>
 

@@ -138,7 +138,7 @@ public class LightAngleStageDialogFragment extends DialogFragment implements Lig
         endAngleSurfaceView.setEditingEnd(true);
 
         startEditText = (EditText) view.findViewById(R.id.light_property_angle_stage_editor_start_angle_edit_text);
-        startEditText.setText(Float.toString(angleStage.getStartVector()[0]));
+        startEditText.setText(Integer.toString(Math.round(angleStage.getStartVector()[0])));
         startEditText.addTextChangedListener(new TextWatcher()
         {
             @Override
@@ -152,7 +152,7 @@ public class LightAngleStageDialogFragment extends DialogFragment implements Lig
 
                 try
                 {
-                    startAngle = Float.parseFloat(s.toString());
+                    startAngle = Integer.parseInt(s.toString()) * 1.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -164,7 +164,7 @@ public class LightAngleStageDialogFragment extends DialogFragment implements Lig
         });
 
         endEditText = (EditText) view.findViewById(R.id.light_property_angle_stage_editor_end_angle_edit_text);
-        endEditText.setText(Float.toString(angleStage.getEndVector()[0]));
+        endEditText.setText(Integer.toString(Math.round(angleStage.getEndVector()[0])));
         endEditText.addTextChangedListener(new TextWatcher()
         {
             @Override
@@ -178,7 +178,7 @@ public class LightAngleStageDialogFragment extends DialogFragment implements Lig
 
                 try
                 {
-                    endAngle = Float.parseFloat(s.toString());
+                    endAngle = Integer.parseInt(s.toString()) * 1.0f;
                 }
                 catch (NumberFormatException e)
                 {
@@ -199,7 +199,7 @@ public class LightAngleStageDialogFragment extends DialogFragment implements Lig
                 {
                     float startAngle = Float.parseFloat(startEditText.getText().toString());
                     startAngle -= 360.0f;
-                    startEditText.setText(String.format("%.1f", startAngle));
+                    startEditText.setText(Integer.toString(Math.round(startAngle)));
                 }
                 catch (NumberFormatException e)
                 {
@@ -219,7 +219,7 @@ public class LightAngleStageDialogFragment extends DialogFragment implements Lig
                 {
                     float startAngle = Float.parseFloat(startEditText.getText().toString());
                     startAngle += 360.0f;
-                    startEditText.setText(String.format("%.1f", startAngle));
+                    startEditText.setText(Integer.toString(Math.round(startAngle)));
                 }
                 catch (NumberFormatException e)
                 {
@@ -238,7 +238,7 @@ public class LightAngleStageDialogFragment extends DialogFragment implements Lig
                 {
                     float endAngle = Float.parseFloat(endEditText.getText().toString());
                     endAngle -= 360.0f;
-                    endEditText.setText(String.format("%.1f", endAngle));
+                    endEditText.setText(Integer.toString(Math.round(endAngle)));
                 }
                 catch (NumberFormatException e)
                 {
@@ -257,7 +257,7 @@ public class LightAngleStageDialogFragment extends DialogFragment implements Lig
                 {
                     float endAngle = Float.parseFloat(endEditText.getText().toString());
                     endAngle += 360.0f;
-                    endEditText.setText(String.format("%.1f", endAngle));
+                    endEditText.setText(Integer.toString(Math.round(endAngle)));
                 }
                 catch (NumberFormatException e)
                 {
@@ -310,8 +310,8 @@ public class LightAngleStageDialogFragment extends DialogFragment implements Lig
     {
         try
         {
-            float[] startVector = new float[]{Float.parseFloat(startEditText.getText().toString())};
-            float[] endVector = new float[]{Float.parseFloat(endEditText.getText().toString())};
+            float[] startVector = new float[]{Integer.parseInt(startEditText.getText().toString()) * 1.0f};
+            float[] endVector = new float[]{Integer.parseInt(endEditText.getText().toString()) * 1.0f};
 
             int duration = Integer.parseInt(durationEditText.getText().toString());
             if (duration <= 0)
@@ -358,11 +358,11 @@ public class LightAngleStageDialogFragment extends DialogFragment implements Lig
     {
         if (!isEditingEnd)
         {
-            startEditText.setText(String.format("%.1f", editedAngle));
+            startEditText.setText(Integer.toString(Math.round(editedAngle)));
         }
         else
         {
-            endEditText.setText(String.format("%.1f", editedAngle));
+            endEditText.setText(Integer.toString(Math.round(editedAngle)));
         }
     }
 
